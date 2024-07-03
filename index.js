@@ -20,7 +20,7 @@ app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });
 
-const uri = `mongodb+srv://rafi_mahid_task:CfUxZVqZuc5bR2vM@cluster0.8d4trn7.mongodb.net/?appName=Cluster0`;
+const uri = `mongodb+srv://${process.env.DB_User}:${process.env.DB_Password}@cluster0.8d4trn7.mongodb.net/?appName=Cluster0`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
